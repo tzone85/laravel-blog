@@ -21,7 +21,14 @@ class PagesController extends Controller{
         $email = 'thando.mini@thandotec.co.za';
 
         //return view('pages.about')->with("fullname", $fullname);
-        return view('pages.about')->withFullname($fullname)->withEmail($email);
+        //return view('pages.about')->withFullname($fullname)->withEmail($email);
+
+        $data = [];
+        $data['email'] = $email;
+        $data['first'] = $first;
+        $data['last'] = $last;
+
+        return view('pages.about')->withData($data)->withFullname($fullname);
     }
 
     public function getContact(){
