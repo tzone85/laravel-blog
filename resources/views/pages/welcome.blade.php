@@ -1,9 +1,5 @@
 @extends('main')
-
-@section('stylesheets')
-    <link rel="stylesheet" href="styles.css" type="text/css">
-@endsection
-
+@section('title', '| Homepage')
 @section('content')
     <div class="row">
         <div class="col-md-12">
@@ -49,8 +45,4 @@
     </div>
 @endsection
 
-@section('scripts')
-    <script>
-        confirm('I loaded up some JS ')
-    </script>
-@endsection
+
