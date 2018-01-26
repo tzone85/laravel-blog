@@ -8,7 +8,7 @@
 
         <div class="container">
             @yield('content')
-
+            <hr>
             @yield('partials._footer')
 
         </div> <!-- end of .container  -->
