@@ -15,3 +15,6 @@ Route::get('contact', 'PagesController@getContact');
 Route::get('about', 'PagesController@getAbout');
 
 Route::get('/', 'PagesController@getIndex');
+
+Route::resource('posts', 'PostController'); //ensure that all the resources are created in the post controller are used here.
+
