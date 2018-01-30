@@ -86,7 +86,12 @@ class PostController extends Controller
      */
     public function edit($id)
     {
-        //
+        // find the post to in db and save into a variable
+        $post = Post::find($id);
+
+        // return the view and pass in the var we previously created
+        return view('posts.edit')->withPost($post);
+
     }
 
     /**

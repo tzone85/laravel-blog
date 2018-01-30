@@ -11,8 +11,6 @@
 
         </div>
 
-
-
         <div class="col-md-4">
             <div class="well">
                 <dl class="dl-horizontal">
@@ -24,18 +22,15 @@
                     <dt>Last Updated:</dt>
                     <dd>{{ date('M j, Y H:i', strtotime($post->updated_at)) }}</dd>
                 </dl>
-
                 <hr>
-
                 <div class="row">
                     <div class="col-sm-6">
-                        {!! Html::linkRoute('posts.edit', 'Edit', array($post->id), array('class' => 'btn btn-primary btn-block') ) !!}
-
+                        {!! Html::linkRoute('posts.edit', 'Edit', array($post->id), array('class' => 'btn btn-primary btn-block btn-sm') ) !!}
+                        {{--<a href="#" class="btn btn-primary btn-block">Edit</a>--}}
                     </div>
                     <div class="col-sm-6">
+                        {!! Html::linkRoute('posts.destroy', 'Delete', array($post->id), array('class' => 'btn btn-danger btn-block btn-sm') ) !!}
                         {{--<a href="#" class="btn btn-danger btn-block">Delete</a>--}}
-
-                        {!! Html::linkRoute('posts.destroy', 'Delete', array($post->id), array('class' => 'btn btn-danger btn-block') ) !!}
                     </div>
                 </div>
 
