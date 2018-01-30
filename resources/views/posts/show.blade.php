@@ -29,8 +29,15 @@
                         {{--<a href="#" class="btn btn-primary btn-block">Edit</a>--}}
                     </div>
                     <div class="col-sm-6">
-                        {!! Html::linkRoute('posts.destroy', 'Delete', array($post->id), array('class' => 'btn btn-danger btn-block btn-sm') ) !!}
-                        {{--<a href="#" class="btn btn-danger btn-block">Delete</a>--}}
+
+                        {{--this is a mini form for the delete button this is very important--}}
+
+                        {!! Form::open(['route' => ['posts.destroy', $post->id], 'method' => 'DELETE']) !!}
+
+                            {!! Form::submit('Delete', ['class' => 'btn btn-danger btn-block btn-sm']) !!}
+
+                        {!! Form::close() !!}
+
                     </div>
                 </div>
 
