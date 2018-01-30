@@ -10,7 +10,7 @@
             @include('partials._messages')
             @yield('content')
             <hr>
-            @yield('partials._footer')
+            @include('partials._footer')
 
         </div> <!-- end of .container  -->
 
