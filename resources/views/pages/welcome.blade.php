@@ -13,29 +13,19 @@
 
     <div class="row">
         <div class="col-md-8">
-            <div class="post">
-                <h3>Post Title</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, dolorum ea iusto maiores nam reiciendis repellendus rerum unde voluptatem. Cupiditate dolor id molestias neque, pariatur praesentium quia quos reiciendis voluptas!...</p>
-                <a href="#" class="btn btn-primary">Read More</a>
-            </div>
-            <hr>
-            <div class="post">
-                <h3>Post Title</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, dolorum ea iusto maiores nam reiciendis repellendus rerum unde voluptatem. Cupiditate dolor id molestias neque, pariatur praesentium quia quos reiciendis voluptas!...</p>
-                <a href="#" class="btn btn-primary">Read More</a>
-            </div>
-            <hr>
-            <div class="post">
-                <h3>Post Title</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, dolorum ea iusto maiores nam reiciendis repellendus rerum unde voluptatem. Cupiditate dolor id molestias neque, pariatur praesentium quia quos reiciendis voluptas!...</p>
-                <a href="#" class="btn btn-primary">Read More</a>
-            </div>
-            <hr>
-            <div class="post">
-                <h3>Post Title</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, dolorum ea iusto maiores nam reiciendis repellendus rerum unde voluptatem. Cupiditate dolor id molestias neque, pariatur praesentium quia quos reiciendis voluptas!...</p>
-                <a href="#" class="btn btn-primary">Read More</a>
-            </div>
+
+            @foreach($posts as $post)
+
+
+
+                <div class="post">
+                    <h3>{{ $post->title }}</h3>
+                    <p>{{ substr($post->body, 0, 300) }} {{ strlen($post->body) > 200 ? "..." : "" }}</p>
+                    {{--<a href="{{ route('pages.single', $post->id) }}" class="btn btn-primary">Read More</a>--}}
+                    <a href="#" class="btn btn-primary">Read More</a>
+                </div>
+                <hr>
+            @endforeach
         </div>
 
         <div class="col-md3 col-md-offset-1">
